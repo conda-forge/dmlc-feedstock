@@ -22,10 +22,10 @@ requirements:
     - openmp
     - curl
     - openssl
-    - backtrace
+    - backtrace  # [linux]
   run:
     - curl
-    - backtrace
+    - backtrace  # [linux]
 
 test:
   commands:
