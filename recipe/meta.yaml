@@ -1,5 +1,5 @@
 {% set name = "dmlc" %}
-{% set version = "0.3" %}
+{% set version = "0.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/{{ name }}/{{ name }}-core/archive/v{{ version }}.tar.gz
-  sha256: 29a6bac5b1639d079cb7336b15d0ea99dbd72dda9cac62057b652d871d06753b
+  sha256: 922ee3ce021b35204f1e424666afa06647f4fc5ce9a920c12e7f850ca2cc2acb
 
 build:
   number: 0
@@ -29,15 +29,14 @@ requirements:
 
 test:
   commands:
-    - test -f ${PREFIX}/lib/libdmlc.a  # [unix]
     - test -d ${PREFIX}/include/dmlc   # [unix]
 
 about:
   home: https://github.com/dmlc/dmlc-core
-  license: APACHE-2.0
+  license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
-  summary: 'Distributed Machine Learning Common Codebase'
+  summary: Distributed Machine Learning Common Codebase
   description: |
     DMLC-Core is the backbone library to support all DMLC projects, offers the bricks to 
     build efficient and scalable distributed machine learning libraries.
