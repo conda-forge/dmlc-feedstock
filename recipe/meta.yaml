@@ -29,12 +29,11 @@ requirements:
 
 test:
   commands:
-    - test -f ${PREFIX}/lib/libdmlc.a  # [unix]
     - test -d ${PREFIX}/include/dmlc   # [unix]
 
 about:
   home: https://github.com/dmlc/dmlc-core
-  license: APACHE-2.0
+  license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
   summary: Distributed Machine Learning Common Codebase
