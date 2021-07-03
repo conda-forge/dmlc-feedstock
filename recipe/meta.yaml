@@ -1,5 +1,5 @@
 {% set name = "dmlc" %}
-{% set version = "0.4" %}
+{% set version = "0.5" %}
 
 package:
   name: {{ name|lower }}
@@ -10,16 +10,17 @@ source:
   sha256: 922ee3ce021b35204f1e424666afa06647f4fc5ce9a920c12e7f850ca2cc2acb
 
 build:
-  number: 2
-  skip: true  # [win]
+  number: 0
 
 requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - cmake
+    - cmake >=3.14
+    - nin
+    - llvm-openmp  # [osx]
+    - libgomp  # [linux]
   host:
-    - openmp
     - curl
     - openssl
     - backtrace
