@@ -1,5 +1,5 @@
 {% set name = "dmlc" %}
-{% set version = "0.4" %}
+{% set version = "0.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/{{ name }}/{{ name }}-core/archive/v{{ version }}.tar.gz
-  sha256: 922ee3ce021b35204f1e424666afa06647f4fc5ce9a920c12e7f850ca2cc2acb
+  sha256: cd97475ae1ecf561a1cb1129552f9889d52b11b3beb4c56e5345d007d5020ece
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win]
 
 requirements:
