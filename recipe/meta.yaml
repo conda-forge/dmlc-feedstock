@@ -19,13 +19,6 @@ requirements:
     - cmake >=3.14
     - llvm-openmp  # [osx]
     - libgomp  # [linux]
-  host:
-    - curl
-    - openssl
-    - backtrace
-  run:
-    - curl
-    - backtrace
 
 test:
   commands:
