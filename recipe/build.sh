@@ -14,7 +14,8 @@ cmake .. \
       -DGOOGLE_TEST=OFF \
       -DUSE_OPENMP=ON \
       -DINSTALL_DOCUMENTATION=OFF \
-      -DUSE_HDFS=OFF 
+      -DUSE_HDFS=OFF \
+      -DCMAKE_BUILD_TYPE=Release \
+      -GNinja
 
-make -j$CPU_COUNT
-make install
+ninja install
