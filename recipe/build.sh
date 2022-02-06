@@ -7,7 +7,7 @@ mkdir -p build
 
 pushd build
 
-cmake .. \
+cmake ${CMAKE_ARGS} .. \
       -DCMAKE_INSTALL_PREFIX="$PREFIX" \
       -DCMAKE_INSTALL_LIBDIR="lib" \
       -DUSE_CXX14_IF_AVAILABLE=ON \
