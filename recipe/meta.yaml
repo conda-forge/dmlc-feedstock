@@ -1,20 +1,21 @@
 {% set name = "dmlc" %}
-{% set version = "0.5" %}
+{% set version = "0.6-20250923-003728" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/{{ name }}/{{ name }}-core/archive/v{{ version }}.tar.gz
-  sha256: cd97475ae1ecf561a1cb1129552f9889d52b11b3beb4c56e5345d007d5020ece
+  url: https://github.com/{{ name }}/{{ name }}-core/archive/{{ version }}.tar.gz
+  sha256: 6fa6c9cd31b2307219fe41675dbacbca45236e865bd687d691acc4d943444c1d
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - cmake >=3.14
     - llvm-openmp  # [osx]
